@@ -38,7 +38,7 @@
 ![1](https://github.com/EVolgina/dzmonitoring2/blob/main/hronograf.PNG) 
 P.S.: если при запуске некоторые контейнеры будут падать с ошибкой - проставьте им режим Z, например ./data:/var/lib:Z
 Перейдите в веб-интерфейс Chronograf (http://localhost:8888) и откройте вкладку Data explorer.
-![2]()
+![2](https://github.com/EVolgina/dzmonitoring2/blob/main/%D0%BE%D1%88%D0%B8%D0%B1%D0%BA%D0%B0.PNG)
 
 А где взять логин и пароль?
 я попыталась сделать своего пользователя, подключилась к контейнеру, создала пользователя и пароль, но с ними тоже выходит ошибка
