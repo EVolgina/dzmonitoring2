@@ -35,7 +35,7 @@
 - Nagios - 	Pull
 - Склонируйте себе репозиторий и запустите TICK-стэк, используя технологии docker и docker-compose.
 - В виде решения на это упражнение приведите скриншот веб-интерфейса ПО chronograf (http://localhost:8888).
-![1]( ) 
+![1](https://github.com/EVolgina/dzmonitoring2/blob/main/hronograf.PNG) 
 P.S.: если при запуске некоторые контейнеры будут падать с ошибкой - проставьте им режим Z, например ./data:/var/lib:Z
 Перейдите в веб-интерфейс Chronograf (http://localhost:8888) и откройте вкладку Data explorer.
 ![2]()
