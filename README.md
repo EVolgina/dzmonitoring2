@@ -142,7 +142,7 @@ f130aa91f752   chrono_config           "/entrypoint.sh chro…"   59 seconds ago
 - на web интерффейс http://localhost:8086 захожу логином и паролем, а дальше не могу состыковать с telegraf
 ![influx](https://github.com/EVolgina/dzmonitoring2/blob/main/influsdb2.PNG)
 ![inf]()
-![teleg]()
+![teleg](https://github.com/EVolgina/dzmonitoring2/blob/main/telegraf1122.PNG)
 -Нажмите на кнопку Add a query
 -Изучите вывод интерфейса и выберите БД telegraf.autogen
 -В measurments выберите cpu->host->telegraf-getting-started, а в fields выберите usage_system. Внизу появится график утилизации cpu.
