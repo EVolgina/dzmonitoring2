@@ -140,7 +140,8 @@ f130aa91f752   chrono_config           "/entrypoint.sh chro…"   59 seconds ago
 96adac0c8906   sandbox_documentation   "/documentation/docu…"   8 days ago           Up 31 hours         0.0.0.0:3010->3000/tcp, :::3010->3000/tcp                                                                                         sandbox_documentation_1
 ```
 - на web интерффейс http://localhost:8086 захожу логином и паролем, а дальше не могу состыковать с telegraf
-![influx]()
+![influx](https://github.com/EVolgina/dzmonitoring2/blob/main/influsdb2.PNG)
+![inf]()
 ![teleg]()
 -Нажмите на кнопку Add a query
 -Изучите вывод интерфейса и выберите БД telegraf.autogen
