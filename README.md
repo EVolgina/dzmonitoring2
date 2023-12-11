@@ -40,6 +40,7 @@ P.S.: если при запуске некоторые контейнеры б�
 Перейдите в веб-интерфейс Chronograf (http://localhost:8888) и откройте вкладку Data explorer.
 ![2](https://github.com/EVolgina/dzmonitoring2/blob/main/%D0%BE%D1%88%D0%B8%D0%B1%D0%BA%D0%B0.PNG)
 внесла изменения в фвйл telegraf.conf
+
 ```
 [[outputs.influxdb]]
   urls = ["http://localhost:8086"]
@@ -49,6 +50,7 @@ P.S.: если при запуске некоторые контейнеры б�
   retention_policy = ""
   write_consistency = "any"
   timeout = "5s"
+```
 ```
 vagrant@vagrant:~/sandbox$ docker-compose up -d
 WARNING: The TYPE variable is not set. Defaulting to a blank string.
@@ -65,21 +67,18 @@ Building influxdb
 Step 1/2 : ARG INFLUXDB_TAG
 Step 2/2 : FROM influxdb:$INFLUXDB_TAG
  ---> 6e977ef79a26
-
 Successfully built 6e977ef79a26
 Successfully tagged influxdb:latest
 Building telegraf
 Step 1/2 : ARG TELEGRAF_TAG
 Step 2/2 : FROM telegraf:$TELEGRAF_TAG
  ---> 161be23be4a0
-
 Successfully built 161be23be4a0
 Successfully tagged telegraf:latest
 Building kapacitor
 Step 1/2 : ARG KAPACITOR_TAG
 Step 2/2 : FROM kapacitor:$KAPACITOR_TAG
  ---> 79b5a5d5782d
-
 Successfully built 79b5a5d5782d
 Successfully tagged kapacitor:latest
 Building chronograf
@@ -92,7 +91,6 @@ Step 3/4 : ADD ./sandbox.src ./usr/share/chronograf/resources/
 Step 4/4 : ADD ./sandbox-kapa.kap ./usr/share/chronograf/resources/
  ---> Using cache
  ---> 2e451b704e1b
-
 Successfully built 2e451b704e1b
 Successfully tagged chrono_config:latest
 Building documentation
@@ -113,7 +111,6 @@ Step 5/6 : COPY static/ /documentation/static
 Step 6/6 : CMD ["/documentation/documentation", "-filePath", "/documentation/"]
  ---> Using cache
  ---> 79596daa0688
-
 Successfully built 79596daa0688
 Successfully tagged sandbox_documentation:latest
 sandbox_documentation_1 is up-to-date
@@ -130,6 +127,7 @@ Opening tabs in browser...
 /usr/bin/xdg-open: 869: w3m: not found
 xdg-open: no method available for opening 'http://localhost:8888'
 ```
+
 ```
 vagrant@vagrant:~/sandbox$ docker ps
 CONTAINER ID   IMAGE                   COMMAND                  CREATED              STATUS              PORTS                                                                                                                             NAMES
@@ -141,7 +139,7 @@ f130aa91f752   chrono_config           "/entrypoint.sh chro…"   59 seconds ago
 ```
 - на web интерффейс http://localhost:8086 захожу логином и паролем, а дальше не могу состыковать с telegraf
 ![influx](https://github.com/EVolgina/dzmonitoring2/blob/main/influsdb2.PNG)
-![inf]()
+![inf](https://github.com/EVolgina/dzmonitoring2/blob/main/infl23.PNG)
 ![teleg](https://github.com/EVolgina/dzmonitoring2/blob/main/telegraf1122.PNG)
 -Нажмите на кнопку Add a query
 -Изучите вывод интерфейса и выберите БД telegraf.autogen
